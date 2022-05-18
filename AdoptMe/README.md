@@ -51,11 +51,23 @@ Add path for prettier to execute
 ```
 
 ### Install prettier as dependency
->npm install --save-dev prettier
+
+```
+npm install --save-dev prettier
+```
 
 or
 
->npm install -D prettier
+```
+npm install -D prettier
+```
+
+### Install ESLint
+```
+npm install -D eslint@8.8.0 eslint-config-prettier@8.3.0
+```
 
 ### Fomart your files
->npm run format
+```bash
+npm run format
+```
