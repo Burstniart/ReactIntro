@@ -67,25 +67,39 @@ classDiagram
 
 ### Install prettier as dependency
 
-```npm install --save-dev prettier```
+```
+npm install --save-dev prettier
+```
 
 or
 
-```npm install -D prettier```
+```
+npm install -D prettier
+```
 
 ### Install ESLint
-```npm install -D eslint@8.8.0 eslint-config-prettier@8.3.0```
+```
+npm install -D eslint@8.8.0 eslint-config-prettier@8.3.0
+```
 
 ### Install Parcel
-```npm install -D parcel@2.2.1```
+```
+npm install -D parcel@2.2.1
+```
 ### Fix your files
 **Prettier**
-```npm run format```
+```
+npm run format
+```
 
 **ESLint**
-```npm run lint```
+```
+npm run lint
+```
 
 ### Set things up
 With this command parcel will take care of everything and now it's all set up
 
-```npm run dev```
+```
+npm run dev
+```
