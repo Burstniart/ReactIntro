@@ -108,3 +108,9 @@ With this command parcel will take care of everything and now it's all set up
 ```
 npm run dev
 ```
+## Splitting to components
+Now you can take your Pet component to a separate JavaScript file, export it as
+```
+export default Pet
+```
+And import it to App.js
