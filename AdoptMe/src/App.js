@@ -1,19 +1,17 @@
 import React from "react";
 // import ReactDOM from "react-dom"; //this imports everything
 import { render } from "react-dom";
-import Pet from "./Pet";
+import SearchParams from "./SearchParams";
 
 // JSX syntax
 const App = () => {
   return (
     <div>
       <h1>Adopt Me!</h1>
-      <Pet name = "Hanzo" animal = "Cat" color = "Gray & White"/>
-      <Pet name = "Hamtaro" anima = "Hamster" color = "Orange"/>
-      <Pet name = "Bambi" anima = "Dog" color = "Black, brown & White"/>
+      <SearchParams/>
     </div>
-  )
-}
+  );
+};
 
 // const App = () => {
 //   return React.createElement("div", {}, [
@@ -35,6 +33,6 @@ const App = () => {
 //     }),
 //   ]);
 // };
-render(<App/>, document.getElementById("root"));
+render(<App />, document.getElementById("root"));
 
 // render(React.createElement(App), document.getElementById("root"));
