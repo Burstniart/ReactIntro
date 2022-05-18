@@ -56,3 +56,6 @@ Add path for prettier to execute
 or
 
 >npm install -D prettier
+
+### Fomart your files
+>npm run format
