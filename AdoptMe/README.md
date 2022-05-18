@@ -40,34 +40,52 @@ classDiagram
 ```
 
 ### Add package.json
->npm init
+```npm init```
 
 ### Modify package.json
-Add path for prettier to execute
+**Add command for prettier to execute**
 ```json
 "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx}\""
   }
 ```
 
+**Add command for eslint to execute**
+```json
+"scripts":{
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+}
+```
+
+**Add parcel command**
+```json
+"scripts":{
+    "dev": "parcel src/index.html",
+}
+```
+
+
 ### Install prettier as dependency
 
-```
-npm install --save-dev prettier
-```
+```npm install --save-dev prettier```
 
 or
 
-```
-npm install -D prettier
-```
+```npm install -D prettier```
 
 ### Install ESLint
-```
-npm install -D eslint@8.8.0 eslint-config-prettier@8.3.0
-```
+```npm install -D eslint@8.8.0 eslint-config-prettier@8.3.0```
 
-### Fomart your files
-```bash
-npm run format
-```
+### Install Parcel
+```npm install -D parcel@2.2.1```
+### Fix your files
+**Prettier**
+```npm run format```
+
+**ESLint**
+```npm run lint```
+
+### Set things up
+With this command parcel will take care of everything and now it's all set up
+
+```npm run dev```
