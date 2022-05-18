@@ -8,6 +8,7 @@ This is my playbook for React JS
 - Index.html As the homepage
 - Style.css for styling
 - Package.json for node modules and dependecies
+- .prettierrc to handle standard formatting
 
 ```mermaid
 classDiagram
@@ -15,6 +16,7 @@ classDiagram
     Src <|-- index
     Src <|-- style
     Src <|-- package
+    Src <|-- dot prettierrc
     Src: +Files
     class App {
         +Javascript
@@ -27,6 +29,9 @@ classDiagram
     }
     class package {
         +JSON
+    }
+    class dot prettierrc {
+        +Prettier
     }
 ```
 
