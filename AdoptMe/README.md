@@ -98,6 +98,11 @@ npm run lint
 ```
 
 ### Set things up
+**Add type="module" to tell parcel what you're doing**
+```html
+<script type="module" src="./App.js"></script>
+```
+
 With this command parcel will take care of everything and now it's all set up
 
 ```
