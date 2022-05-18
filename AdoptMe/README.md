@@ -12,12 +12,22 @@ This is my playbook for React JS
 
 ```mermaid
 classDiagram
+    Project <|-- Src
+    Project <|-- package
+    Project <|-- dot prettierrc
     Src <|-- App
     Src <|-- index
     Src <|-- style
-    Src <|-- package
-    Src <|-- dot prettierrc
-    Src: +Files
+    Project: +Dir files
+    class Src {
+        +Page files
+    }
+    class package {
+        +JSON
+    }
+    class dot prettierrc {
+        +Prettier
+    }
     class App {
         +Javascript
     }
@@ -27,13 +37,22 @@ classDiagram
     class style {
         +CSS
     }
-    class package {
-        +JSON
-    }
-    class dot prettierrc {
-        +Prettier
-    }
 ```
 
-Add package.json
+### Add package.json
 >npm init
+
+### Modify package.json
+Add path for prettier to execute
+```json
+"scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
+  }
+```
+
+### Install prettier as dependency
+>npm install --save-dev prettier
+
+or
+
+>npm install -D prettier
