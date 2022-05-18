@@ -4,7 +4,7 @@
   "description": "This is my playbook for React JS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Burstniart/ReactIntro/issues"
   },
-  "homepage": "https://github.com/Burstniart/ReactIntro#readme"
+  "homepage": "https://github.com/Burstniart/ReactIntro#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
 }
