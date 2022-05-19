@@ -1,15 +1,20 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import ReactDOM from "react-dom"; //this imports everything
 import { render } from "react-dom";
 import SearchParams from "./SearchParams";
+import Details from "./Details";
 
 // JSX syntax
 const App = () => {
   return (
-    <div>
+    <BrowserRouter>
       <h1>Adopt Me!</h1>
-      <SearchParams />
-    </div>
+      <Routes>
+        <Route path="/details/:id" element={<Details/>} />
+        <Route path="/" element={<SearchParams/>} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
