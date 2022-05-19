@@ -2,6 +2,7 @@ import { Component, useEffect } from "react";
 // can't use hooks with class components
 import { useParams } from "react-router-dom";
 import Carousel from "./Carousel";
+import ErrorBoundary from "./ErrorBoundary";
 
 // as class
 class Details extends Component {
@@ -47,7 +48,11 @@ class Details extends Component {
 
 const WrappedDetails = () => {
   const params = useParams();
-  return <Details params={params} />
+  return (
+    <ErrorBoundary>
+      <Details params={params} />
+    </ErrorBoundary>
+  )
 }
 
 export default WrappedDetails;
