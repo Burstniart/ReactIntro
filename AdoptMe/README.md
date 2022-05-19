@@ -114,3 +114,28 @@ Now you can take your Pet component to a separate JavaScript file, export it as
 export default Pet
 ```
 And import it to App.js
+
+## Adding Routes
+Install Router 
+>The version you install is relevant to React version
+
+```
+npm install react-router-dom@6.2.1
+```
+
+Import to your app
+
+```
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+```
+
+**Now you can use Routes**
+```
+<BrowserRouter>
+    <h1>Adopt Me!</h1>
+    <Routes>
+        <Route path="/details/:id" element={<Details/>} />
+        <Route path="/" element={<SearchParams/>} />
+    </Routes>
+</BrowserRouter>
+```
