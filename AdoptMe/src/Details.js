@@ -28,6 +28,9 @@ class Details extends Component {
       if (this.state.loading) {
         return <h2>loading...</h2>
       }
+
+      // throw new Error("Just Monika.");
+      
       const {animal, breed, city, state, description, name, images} = this.state;
 
       return (
