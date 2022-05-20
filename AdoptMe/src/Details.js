@@ -1,8 +1,9 @@
-import { Component, useEffect } from "react";
+import { Component, useContext, useEffect } from "react";
 // can't use hooks with class components
 import { useParams } from "react-router-dom";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
+import ThemeContext from "./ThemeContex";
 
 // as class
 class Details extends Component {
@@ -41,7 +42,12 @@ class Details extends Component {
             <h2>
               {`${animal} - ${breed} - ${city}, ${state}`}
             </h2>
-            <button>Adopt {name}</button>
+            <ThemeContext>
+              {
+                ([theme]) => (
+                  <button style ={{backgroundColor: theme}}>Adopt {name}</button>
+                )}
+            </ThemeContext>
             <p>{description}</p>
           </div>
         </div>
@@ -53,7 +59,7 @@ const WrappedDetails = () => {
   const params = useParams();
   return (
     <ErrorBoundary>
-      <Details params={params} />
+      <Details  params={params} />
     </ErrorBoundary>
   )
 }

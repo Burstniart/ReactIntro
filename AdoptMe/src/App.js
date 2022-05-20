@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 // import ReactDOM from "react-dom"; //this imports everything
 import { render } from "react-dom";
 import SearchParams from "./SearchParams";
+import ThemeContext from "./ThemeContex";
 import Details from "./Details";
 
 // JSX syntax
 const App = () => {
+  const theme = useState("purple")
   return (
+    <ThemeContext.Provider value={theme}>
     <BrowserRouter>
       <header>
       <Link to="/">Adopt Me!</Link>
@@ -17,6 +20,7 @@ const App = () => {
         <Route path="/" element={<SearchParams/>} />
       </Routes>
     </BrowserRouter>
+    </ThemeContext.Provider>
   );
 };
 
